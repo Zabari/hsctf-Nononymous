@@ -14,7 +14,7 @@ for i in xrange(limit):
     summation.append(triangular(i))
 
 
-I don't know if we need this part
+#I don't know if we need this part
 val = 0 
 for num in xrange(1, limit):
     if perfect_sq(num) and (num in summation):
