@@ -1,0 +1,2 @@
+I got the code from here and altered it for the purpose of the problem.
+https://esolangs.org/wiki/Deadfish#Python
