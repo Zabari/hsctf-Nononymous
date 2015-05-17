@@ -1,0 +1,2 @@
+If we decompile the class file, we can view the actual java code. From there, all we need to do
+is shift the string by 5 characters using the caesar cipher to get the flag.
