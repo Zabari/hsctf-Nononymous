@@ -1,0 +1,6 @@
+We want to be able to log in, and there is a nice page that will give us the password. However,
+we are unable to view it with any browser, even if it's non-gui, such as wget or curl, or even using python's
+urllib. As a result, we need to spoof our user agent and make it blank. Now, we can get the password and log in.
+The command I used was:
+
+    curl -H "User-Agent:" http://104.236.80.67/KeithsMoreSecureBlog/passwordhere.php
