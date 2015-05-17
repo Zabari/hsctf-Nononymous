@@ -1,0 +1,6 @@
+Looking at the source, we can see that there is a buffer with a lenght of 64, so we need to overflow that.
+We also need to turn bad into 0x13371337, and we can do this by adding it to the end of our 64 string overflow.
+The payload is
+
+    python -c "print 'A'*64 + '\x37\x13\x37\x13' | nc 104.236.80.67 5681 "
+                                   (endian)
