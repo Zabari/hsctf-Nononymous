@@ -1,0 +1,2 @@
+If we input the given password hash as the password, we get some kind of message with part of it looking
+like some kinda password. If we input that, we get the flag.
