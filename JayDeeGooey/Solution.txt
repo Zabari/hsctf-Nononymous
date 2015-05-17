@@ -1,0 +1,3 @@
+If we decompile the source with jd-gui (JayDeeGooey), we find out that a substitution cipher is being used.
+Letters are being mapped using a hashmap, so if we print that out, we can get the substitutions used easily.
+If we reverse the string that is being compared, we get the flag.
