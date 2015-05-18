@@ -1,0 +1,4 @@
+A quick search through all the source revealed that the phone number was NOT in the source.
+So, by browsing through everything possible on the website, I came across the rss feed. Upon viewing
+the feed for the site, and searching for 'phone', I found the phone number, which is the flag.
+For clarification, the site I went on was "https://sites.google.com/feeds/content/site/notarmsdealers".
