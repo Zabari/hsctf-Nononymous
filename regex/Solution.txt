@@ -1,0 +1,6 @@
+This will match letters too, but is considered valid
+
+    [10].{3}|20..
+
+Basically matches anything that starts with a 1 or 0 with any 3 characters afterwards
+or anything that starts with a 20 and any two characters.
