@@ -1,159 +1,44 @@
-# Note, you need z3
+# Output from solve.py
 
-from z3 import *
+s = [0] * 36
+s[0] = 108
+s[35] = 103
+s[34] = 110
+s[33] = 105
+s[32] = 108
+s[31] = 108
+s[30] = 97
+s[29] = 99
+s[28] = 95
+s[27] = 114
+s[26] = 117
+s[25] = 111
+s[24] = 121
+s[23] = 95
+s[22] = 115
+s[21] = 105
+s[20] = 95
+s[19] = 103
+s[18] = 110
+s[17] = 105
+s[16] = 115
+s[15] = 114
+s[14] = 101
+s[13] = 118
+s[12] = 101
+s[11] = 114
+s[10] = 95
+s[9] = 101
+s[8] = 107
+s[7] = 105
+s[6] = 108
+s[5] = 95
+s[4] = 115
+s[3] = 107
+s[2] = 111
+s[1] = 111
 
-# Initialize all the characters in the string
-s = Solver()
-s0 = Int("s[0]")
-s1 = Int("s[1]")
-s2 = Int("s[2]")
-s3 = Int("s[3]")
-s4 = Int("s[4]")
-s5 = Int("s[5]")
-s6 = Int("s[6]")
-s7 = Int("s[7]")
-s8 = Int("s[8]")
-s9 = Int("s[9]")
-s10 = Int("s[10]")
-s11 = Int("s[11]")
-s12 = Int("s[12]")
-s13 = Int("s[13]")
-s14 = Int("s[14]")
-s15 = Int("s[15]")
-s16 = Int("s[16]")
-s17 = Int("s[17]")
-s18 = Int("s[18]")
-s19 = Int("s[19]")
-s20 = Int("s[20]")
-s21 = Int("s[21]")
-s22 = Int("s[22]")
-s23 = Int("s[23]")
-s24 = Int("s[24]")
-s25 = Int("s[25]")
-s26 = Int("s[26]")
-s27 = Int("s[27]")
-s28 = Int("s[28]")
-s29 = Int("s[29]")
-s30 = Int("s[30]")
-s31 = Int("s[31]")
-s32 = Int("s[32]")
-s33 = Int("s[33]")
-s34 = Int("s[34]")
-s35 = Int("s[35]")
-
-# All between _-z inclusive
-s.add(s0 >= ord('_'))
-s.add(s1 >= ord('_'))
-s.add(s2 >= ord('_'))
-s.add(s3 >= ord('_'))
-s.add(s4 >= ord('_'))
-s.add(s5 >= ord('_'))
-s.add(s6 >= ord('_'))
-s.add(s7 >= ord('_'))
-s.add(s8 >= ord('_'))
-s.add(s9 >= ord('_'))
-s.add(s10 >= ord('_'))
-s.add(s11 >= ord('_'))
-s.add(s12 >= ord('_'))
-s.add(s13 >= ord('_'))
-s.add(s14 >= ord('_'))
-s.add(s15 >= ord('_'))
-s.add(s16 >= ord('_'))
-s.add(s17 >= ord('_'))
-s.add(s18 >= ord('_'))
-s.add(s19 >= ord('_'))
-s.add(s20 >= ord('_'))
-s.add(s21 >= ord('_'))
-s.add(s22 >= ord('_'))
-s.add(s23 >= ord('_'))
-s.add(s24 >= ord('_'))
-s.add(s25 >= ord('_'))
-s.add(s26 >= ord('_'))
-s.add(s27 >= ord('_'))
-s.add(s28 >= ord('_'))
-s.add(s29 >= ord('_'))
-s.add(s30 >= ord('_'))
-s.add(s31 >= ord('_'))
-s.add(s32 >= ord('_'))
-s.add(s33 >= ord('_'))
-s.add(s34 >= ord('_'))
-s.add(s35 >= ord('_'))
-
-s.add(s0 <= ord('z'))
-s.add(s1 <= ord('z'))
-s.add(s2 <= ord('z'))
-s.add(s3 <= ord('z'))
-s.add(s4 <= ord('z'))
-s.add(s5 <= ord('z'))
-s.add(s6 <= ord('z'))
-s.add(s7 <= ord('z'))
-s.add(s8 <= ord('z'))
-s.add(s9 <= ord('z'))
-s.add(s10 <= ord('z'))
-s.add(s11 <= ord('z'))
-s.add(s12 <= ord('z'))
-s.add(s13 <= ord('z'))
-s.add(s14 <= ord('z'))
-s.add(s15 <= ord('z'))
-s.add(s16 <= ord('z'))
-s.add(s17 <= ord('z'))
-s.add(s18 <= ord('z'))
-s.add(s19 <= ord('z'))
-s.add(s20 <= ord('z'))
-s.add(s21 <= ord('z'))
-s.add(s22 <= ord('z'))
-s.add(s23 <= ord('z'))
-s.add(s24 <= ord('z'))
-s.add(s25 <= ord('z'))
-s.add(s26 <= ord('z'))
-s.add(s27 <= ord('z'))
-s.add(s28 <= ord('z'))
-s.add(s29 <= ord('z'))
-s.add(s30 <= ord('z'))
-s.add(s31 <= ord('z'))
-s.add(s32 <= ord('z'))
-s.add(s33 <= ord('z'))
-s.add(s34 <= ord('z'))
-s.add(s35 <= ord('z'))
-
-# Here are the conditions:
-s.add(s0 + s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s11 + s12 + s13 + s14 + s15 + s16 + s17 + s18 + s19 + s20 + s21 + s22 + s23 + s24 + s25 + s26 + s27 + s28 + s29 + s30 + s31 + s32 + s33 + s34 + s35 == 3842)
-s.add(s0 - s1 == -3)
-s.add(s1 - s2 == 0)
-s.add(s2 - s3 == 4)
-s.add(s3 - s4 == -8)
-s.add(s4 - s5 == 20)
-s.add(s5 - s6 == -13)
-s.add(s6 - s7 == 3)
-s.add(s7 - s8 == -2)
-s.add(s8 - s9 == 6)
-s.add(s9 - s10 == 6)
-s.add(s10 - s11 == -19)
-s.add(s11 - s12 == 13)
-s.add(s12 - s13 == -17)
-s.add(s13 - s14 == 17)
-s.add(s14 - s15 == -13)
-s.add(s15 - s16 == -1)
-s.add(s16 - s17 == 10)
-s.add(s17 - s18 == -5)
-s.add(s18 - s19 == 7)
-s.add(s19 - s20 == 8)
-s.add(s20 - s21 == -10)
-s.add(s21 - s22 == -10)
-s.add(s22 - s23 == 20)
-s.add(s23 - s24 == -26) # This line proves that we cannot limit to just a-z inclusive, since the distance from a-z is 25
-s.add(s24 - s25 == 10)
-s.add(s25 - s26 == -6)
-s.add(s26 - s27 == 3)
-s.add(s27 - s28 == 19)
-s.add(s28 - s29 == -4)
-s.add(s29 - s30 == 2)
-s.add(s30 - s31 == -11)
-s.add(s31 - s32 == 0)
-s.add(s32 - s33 == 3)
-s.add(s33 - s34 == -5)
-s.add(s34 - s35 == 7)
-
-# Print out the solved things
-print s.check()
-print s.model()
+key = ""
+for ordd in s:
+    key += chr(ordd)
+print key
