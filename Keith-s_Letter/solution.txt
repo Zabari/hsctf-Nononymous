@@ -1,0 +1,10 @@
+Use this website:
+http://rumkin.com/tools/cipher/vigenere.php
+They told you the first letter was h, and you know that letters represent different letters due to the fact that words like aa exist.
+Put it in decipher mode, and start with a.  I guessed that the first words were hello keith, and quickly realized the whole text was contained in the cipher.
+Due to the offset, the next letter of the text appeared before the next letter of the cipher, so you continue typing in the text letter by letter and you get the whole text.
+
+Encrypted:hlpwz yomba aapa aa s bjo hmzqm yt yxbq mh amko mb xesamv kh rhgtpni ytf pmi napa hprk ba gbyj flvv xh odg zkfuv mmavt aj hhpcg akfuv klnzk mvk wrv cmi c im sxvet avdt xh gwi cmi mgcb oz ral awy ral jqlg oa utpnihwayxvet
+Passkey: ahellokeiththisisabigblockoftexttomakeiteasiertodecryptforyouthispartisonlyheretoaddwordsusingupspacewordsstuffhowareyouiamgreathopetoseeyousoonbythewaytheflagiscryptoisgrea
+Decrypted: hello keith this is a big block of text to make it easier to decrypt for you this part is only here to add words using up space words stuff how are you i am great hope to see you soon by the way the flag is cryptoisgreat
+Flag: cryptoisgreat
