@@ -7,8 +7,8 @@ import math
 ]
 cols are lanes
 '''
-ROWS = 5
-COLS = 3
+ROWS = 10000
+COLS = 100
 track = [[0]*COLS]*ROWS
 
 class Node:
@@ -37,7 +37,7 @@ def solve():
         q = Node(0,0)
         q.f = 999999
         for opt in opens:
-            if opt.f < q.f:
+            if opt.f <= q.f:
                 q = opt
         opens.remove(q)
         succs = []
