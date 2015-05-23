@@ -1,0 +1,9 @@
+def main():
+    f = open("input.txt",'r').read().split("\n")
+    count = 1
+    l = []
+    while count < len(f):
+        l.append([f[count-1],f[count]])
+    print l
+
+main()
