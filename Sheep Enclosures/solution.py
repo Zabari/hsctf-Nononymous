@@ -21,12 +21,12 @@ def area(l):
     
 def convex(l):
     l.sort() #sorts the points by x-value
-    m = [[l[0][0] - 1,l[0][1]],l[0]] #temporary holder for list
+    m = [[l[0][0],l[0][1]-1],l[0]] #temporary holder for list
     n=[] #new holder
     while(True):
-        if m[-1] == m[1] and len(m) != 2: # checks if the last coor is the same as the 
+        if m[-1] == m[1] and len(m) != 2: # checks if the last coor is the same as the first one
             n =  m[1:-1]
-            break
+            break 
         minangle = 2 * pi
         mini = []
         for i in l:
@@ -35,6 +35,8 @@ def convex(l):
                 continue
             if i not in m[2:]:
                 angl = angle(m[-2][0],m[-2][1],m[-1][0],m[-1][1],i[0],i[1])
+                
+                    
                 if 2*pi - angl < minangle:
                     minangle = 2*pi - angl
                     mini = i
@@ -46,7 +48,7 @@ def convex(l):
     print n
     return area(n)
             
-                        
+
         
 def main():
     print area([[0,1],[-1,-1],[1,-1]])
