@@ -1,0 +1,5 @@
+def main():
+    f = open("input.txt",'r').read().split("\n") # contains coordinates
+    l = []
+    for i in f:
+        l.append([int(i.split()[0]),int(i.split()[1])])
