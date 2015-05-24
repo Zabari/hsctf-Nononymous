@@ -20,25 +20,36 @@ def area(l):
     return abs(sum1 - sum2) / 2.0
     
 def convex(l):
-    l.sort()
-    m = [[l[0][0] - 1,l[0][1]],l[0]]
+    l.sort() #sorts the points by x-value
+    m = [[l[0][0] - 1,l[0][1]],l[0]] #temporary holder for list
+    n=[] #new holder
     while(True):
-        if m[:-1] == m[1]:
-            n = m[1:-1]
+        if m[-1] == m[1] and len(m) != 2: # checks if the last coor is the same as the 
+            n =  m[1:-1]
             break
         minangle = 2 * pi
         mini = []
         for i in l:
-            angl = angle(m[:-2][0],m[:-2][1],m[:-1][0],m[:-1][1],i[0],i[1])
-            if (i not in m[2:]) and 2*pi - angl < minangle:
-                minangle = angl
-                mini = i
+            
+            if len(m) == 2 and i == m[1]:
+                continue
+            if i not in m[2:]:
+                angl = angle(m[-2][0],m[-2][1],m[-1][0],m[-1][1],i[0],i[1])
+                if 2*pi - angl < minangle:
+                    minangle = 2*pi - angl
+                    mini = i
         m.append(mini)
+        try:
+            l.remove(mini)
+        except:
+            print "hi"
+    print n
     return area(n)
             
                         
         
 def main():
+    print area([[0,1],[-1,-1],[1,-1]])
     f = open("input.txt",'r').read().split("\n") # contains coordinates
     l = []
     for i in f:
