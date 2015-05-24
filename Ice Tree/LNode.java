@@ -1,6 +1,7 @@
 import java.util.*;
 public class LNode{
     private int number;
+    private long possible;
     private LNode left, right, parent;
     
     public LNode(int num){
@@ -13,6 +14,14 @@ public class LNode{
     
     public int getNumber(){
 	return number;
+    }
+
+    public void setPossible(long value){
+	possible = value;
+    }
+
+    public long getPossible(){
+	return possible;
     }
     
     public void setLeft(LNode s){
