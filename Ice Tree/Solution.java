@@ -67,9 +67,11 @@ public class Solution{
 	}
 	long total = 0;
 	for(LNode l : counters){
+	    System.out.println(l.getNumber() + " _ " + l.getPossible());
+
 	    total = (total + l.getPossible()) % 1000000007L;
 	}
-	System.out.println(total);
+	System.out.println(total - 1); // get rid of the LNode(0) thing
 	System.out.println("HI" + counters[562].getPossible());
 	System.out.println(counters[562].getLeft());
 
