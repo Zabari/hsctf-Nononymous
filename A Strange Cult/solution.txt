@@ -1,0 +1,10 @@
+The question hints at some holy book of log, so we do some google searching and we find:
+http://wolfgirl17946.deviantart.com/journal/The-Holy-Log-271066610
+
+Scroll down, and we see:
+"For every hole in the log caused by your replacement you shall plant ten
+saplings."
+
+So if we make 13 holes, we need to plant 130 saplings.
+
+Flag: "130 saplings"
